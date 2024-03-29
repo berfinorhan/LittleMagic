@@ -11,5 +11,5 @@ interface ScryfallRepository {
 
     suspend fun getSetByCode(setCode: String): Flow<Result<CardSet>>
 
-    suspend fun getSets(): Flow<Result<List<CardSet>>>
+    suspend fun getCardSetList(): Flow<Result<List<CardSet>>>
 }

@@ -6,10 +6,10 @@ import com.beecoding.littlemagic.utils.Result
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class GetSetsUseCase @Inject constructor(
+class GetCardSetListUseCase @Inject constructor(
     private val repository: ScryfallRepository
 ) {
     suspend operator fun invoke(): Flow<Result<List<CardSet>>> {
-        return repository.getSets()
+        return repository.getCardSetList()
     }
 }

@@ -40,9 +40,9 @@ class ScryfallRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun getSets(): Flow<Result<List<CardSet>>> = flow {
+    override suspend fun getCardSetList(): Flow<Result<List<CardSet>>> = flow {
         try {
-            val sets = api.getSets()
+            val sets = api.getCardSetList()
             emit(Result.Success(data = sets.map { it.toCardSet() }))
         } catch (e: HttpException) {
             emit(Result.Error(message = e.localizedMessage ?: "An unexpected error happened."))

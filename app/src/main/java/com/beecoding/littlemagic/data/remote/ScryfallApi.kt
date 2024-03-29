@@ -14,6 +14,6 @@ interface ScryfallApi {
     suspend fun getSetByCode(@Path("setName") setName: String): CardSetDto
 
     @GET("/sets")
-    suspend fun getSets(): List<CardSetDto>
+    suspend fun getCardSetList(): List<CardSetDto>
 
 }

@@ -4,12 +4,13 @@ import com.beecoding.littlemagic.domain.model.CardSet
 import com.beecoding.littlemagic.domain.repository.ScryfallRepository
 import com.beecoding.littlemagic.utils.Result
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class GetCardSetListUseCase @Inject constructor(
     private val repository: ScryfallRepository
 ) {
-    suspend operator fun invoke(): Flow<Result<List<CardSet>>> {
-        return repository.getCardSetList()
+    operator fun invoke(): Flow<Result<List<CardSet>>> = flow {
+        repository.getCardSetList()
     }
 }

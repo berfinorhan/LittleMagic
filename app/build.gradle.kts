@@ -58,6 +58,8 @@ dependencies {
     implementation(libs.converter.gson)
 
     implementation(libs.hilt.android)
+    implementation(libs.androidx.navigation.compose.hilt)
+    implementation(libs.androidx.navigation.compose)
     kapt(libs.hilt.compiler)
 
     implementation(libs.androidx.core.ktx)

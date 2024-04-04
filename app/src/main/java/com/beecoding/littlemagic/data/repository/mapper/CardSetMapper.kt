@@ -21,6 +21,10 @@ fun CardSetDto.toCardSet(): CardSet {
         searchUri = searchUri,
         setType = setType,
         tcgPlayerId = tcgPlayerId,
-        uri = uri
+        uri = uri,
+        block = block,
+        blockCode = blockCode,
+        parentSetCode = parentSetCode,
+        printedSize = printedSize
     )
 }
